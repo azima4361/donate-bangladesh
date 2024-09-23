@@ -17,6 +17,53 @@
     }
 </style>
 <body class="lexend-font">
-    <h1>hiiiiiiii</h1>
+    <header class="py-8 bg-[#F9F7F3] fixed left-0 top-0 z-50 w-full  ">
+        <nav class="grid grid-cols-4 ">
+            <div class="ml-28 flex items-center ">
+               <button class="btn bg-[#B4F461] px-8"><a href="">Blog</a></button>
+            </div>
+            <div class="col-span-2">
+                <div class="flex justify-center items-center gap-2">
+                    <img src="assets/logo.png" alt="">
+                    <h3 class="font-bold">Donate Bangladesh</h3>
+                </div>
+            </div>
+        
+        <div class="ml-10 flex justify-center gap-2 items-center">
+            <img src="assets/coin.png" alt="">
+            <h3  class="text-[#111111B3]"><span id="total-amount">5500</span> BDT</h3>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="flex justify-center items-center gap-5 mt-40">
+           <button  id="donation" class="btn bg-white px-8">Donation</button>
+           <button id="history" class="btn bg-white px-8">History</button>
+        </div>
+
+        <section class="w-3/4 container mx-auto mt-20">
+            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+                <div class="" >
+                    <img class="max-w-md h-full" src="assets/noakhali.png" alt="">
+                </div>
+                <div class="">
+                    <button class="btn">
+                        <img src="assets/coin.png" alt="">
+                        <p><span id="added-money">0</span>BDT</p>
+                    </button>
+                    <h3 class="py-4 font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
+                    <p class=" pb-4 text-[#111111B3] font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <input  class=" w-full border border-[#1111111A] rounded-lg px-5 py-3 " type="text" name="" id="donate-money" placeholder="Write Donation Amount">
+                    <div class="pt-5 w-full">
+                        <button onclick="donateForFlood(this)" class="btn w-full bg-[#B4F461] font-bold">Donate Now</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+   <script src="donate.js"></script>
 </body>
 </html>
