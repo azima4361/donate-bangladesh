@@ -1,10 +1,14 @@
 let totalAmount = document.getElementById("total-amount") ;
 let modalAmount = document.getElementById("modal-amount")
+let myTime = new Date()
+let time = new Intl.DateTimeFormat("en-us", {
+    dateStyle: "full",
+    timeStyle: "full",
+});
 
 
 
-
-function donateForFlood(donateInputId, addedMoneyId) {
+function donateForFlood(donateInputId, addedMoneyId, donationCauseId) {
     
     const donateMoney = document.getElementById(donateInputId); 
    
@@ -34,8 +38,21 @@ document.getElementById("modal-amount").innerText = donateMoneyValue;
     document.getElementById("my_modal_5").showModal();
     donateMoney.value= "";
 
-    // donationHistory(donateInputId, donationCauseId);
-    
+   
+ 
+  
+    const donateHistory = document.getElementById(donationCauseId).innerText;
+
+    const historyList = document.createElement("div");
+    historyList.className = "border border-[#1111111A] rounded-2xl p-8 mb-5";
+    historyList.innerHTML = `
+  <h4>${donateMoneyValue} taka is donated for ${donateHistory}</h4>
+    <p>Date: ${time.format(myTime)}</p>
+ 
+ 
+    `;
+    const historyContainer =document.getElementById("history-list"); 
+    historyContainer.insertBefore(historyList,historyContainer.firstChild);
  }
 
 }
@@ -66,20 +83,3 @@ donationBtn.addEventListener("click", function () {
     document.getElementById("donation-section").classList.remove("hidden");
 })
 
-function donationHistory(donateInputId, donationCauseId){
-    const donateMoney = document.getElementById(donateInputId); 
-    const donateHistory = document.getElementById(donationCauseId).innerText;
-console.log(donateHistory)
-    let donateMoneyValue = parseFloat(donateMoney.value);
-    console.log(typeof donateMoneyValue)
-    const historyList = document.createElement("div");
-    historyList.className = "border border-[#1111111A] rounded-2xl p-8 mb-5";
-    historyList.innerHTML = `
-  <h4>${donateMoneyValue} taka is donated for ${donateHistory}</h4>
-    <p>Date: ${new Date().toLocaleDateString()}</p>
- 
- 
-    `;
-    const historyContainer =document.getElementById("history-list"); 
-    historyContainer.insertBefore(historyList,historyContainer.firstChild);
-}
