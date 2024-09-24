@@ -2,7 +2,10 @@ let totalAmount = document.getElementById("total-amount") ;
 let modalAmount = document.getElementById("modal-amount")
 
 
+
+
 function donateForFlood(donateInputId, addedMoneyId) {
+    
     const donateMoney = document.getElementById(donateInputId); 
    
     const addedMoney = document.getElementById(addedMoneyId);
@@ -37,4 +40,28 @@ document.getElementById("modal-amount").innerText = donateMoneyValue;
 
 }
 
+const historyBtn = document.getElementById("history-btn");
+const donationBtn = document.getElementById("donation-btn");
 
+historyBtn.addEventListener("click", function () {
+
+    historyBtn.classList.add("bg-[#B4F461]");
+    historyBtn.classList.remove("bg-white");
+    donationBtn.classList.add("bg-white");
+    donationBtn.classList.remove("bg-[#B4F461]");
+
+  
+    document.getElementById("donation-section").classList.add("hidden");
+    document.getElementById("history-section").classList.remove("hidden");
+})
+
+donationBtn.addEventListener("click", function () {
+    donationBtn.classList.add("bg-[#B4F461]");
+    donationBtn.classList.remove("bg-white");
+    historyBtn.classList.add("bg-white");
+    historyBtn.classList.remove("bg-[#B4F461]");
+
+   
+    document.getElementById("history-section").classList.add("hidden");
+    document.getElementById("donation-section").classList.remove("hidden");
+})
