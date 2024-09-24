@@ -46,8 +46,8 @@ document.getElementById("modal-amount").innerText = donateMoneyValue;
     const historyList = document.createElement("div");
     historyList.className = "border border-[#1111111A] rounded-2xl p-8 mb-5";
     historyList.innerHTML = `
-  <h4>${donateMoneyValue} taka is donated for ${donateHistory}</h4>
-    <p>Date: ${time.format(myTime)}</p>
+  <h4 class="font-bold text-xl pb-3">${donateMoneyValue} taka is donated for ${donateHistory}</h4>
+    <p class="text-[#111111B3] ">Date: ${time.format(myTime)}</p>
  
  
     `;
