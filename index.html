@@ -18,8 +18,8 @@
 </style>
 <body class="lexend-font">
     <header class="py-8 bg-[#F9F7F3] fixed left-0 top-0 z-50 w-full  ">
-        <nav class="grid grid-cols-4 ">
-            <div class="ml-28 flex items-center ">
+        <nav class="grid grid-cols-1 lg:grid-cols-4 space-y-3">
+            <div class=" flex justify-center items-center ">
                <button class="btn bg-[#B4F461] px-8"><a href="">Blog</a></button>
             </div>
             <div class="col-span-2">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         
-        <div class="ml-10 flex justify-center gap-2 items-center">
+        <div class=" flex justify-center gap-2 items-center">
             <img src="assets/coin.png" alt="">
             <h3  class="text-[#111111B3]"><span id="total-amount">5500</span> BDT</h3>
         </div>
@@ -43,14 +43,14 @@
     <main>
         
 <!-- donation section  -->
-        <section id="donation-section" class="w-3/4 container mx-auto mt-72">
+        <section id="donation-section" class="w-full lg:w-3/4 lg:container mx-auto mt-96 lg:mt-72">
             <!-- Noakhali  -->
-            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+            <div class="border border-[#1111111A] rounded-2xl p-4 lg:p-8 grid grid-cols-1 lg:grid-cols-2">
                 <div class="" >
-                    <img class="max-w-md h-full" src="assets/noakhali.png" alt="">
+                    <img class="lg:max-w-md lg:h-full" src="assets/noakhali.png" alt="">
                 </div>
                 <div class="">
-                    <button class="btn">
+                    <button class="btn mt-5 lg:mt-0">
                         <img src="assets/coin.png" alt="">
                         <p><span id="added-money-noakhali">0</span>BDT</p>
                     </button>
@@ -84,12 +84,12 @@
             </div>
 
 <!-- feni  -->
-            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-2 mt-5">
                 <div class="" >
-                    <img class="max-w-md h-full" src="assets/feni.png" alt="">
+                    <img class="lg:max-w-md lg:h-full" src="assets/feni.png" alt="">
                 </div>
                 <div class="">
-                    <button class="btn">
+                    <button class="btn mt-5 lg:mt-0">
                         <img src="assets/coin.png" alt="">
                         <p><span id="added-money-feni">0</span>BDT</p>
                     </button>
@@ -123,12 +123,12 @@
             </div>
 <!-- quota  -->
 
-            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-2 mt-5">
                 <div class="" >
-                    <img class="max-w-md h-full" src="assets/quota-protest.png" alt="">
+                    <img class="lg:max-w-md lg:h-full" src="assets/quota-protest.png" alt="">
                 </div>
                 <div class="">
-                    <button class="btn">
+                    <button class="btn mt-5 lg:mt-0">
                         <img src="assets/coin.png" alt="">
                         <p><span id="added-money-quota">0</span>BDT</p>
                     </button>
@@ -164,7 +164,7 @@
         </section>
 
         <!-- history section  -->
-         <section id="history-section" class="w-3/4 container mx-auto mt-72">
+         <section id="history-section" class="lg:w-3/4 lg:container mx-auto mt-96 lg:mt-72">
             <div id="history-list"></div>
          </section>
     </main>

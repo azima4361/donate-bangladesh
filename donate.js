@@ -73,7 +73,7 @@ console.log(donateHistory)
     let donateMoneyValue = parseFloat(donateMoney.value);
     console.log(typeof donateMoneyValue)
     const historyList = document.createElement("div");
-    historyList.className = "border border-[#1111111A] rounded-2xl p-8 ";
+    historyList.className = "border border-[#1111111A] rounded-2xl p-8 mb-5";
     historyList.innerHTML = `
   <h4>${donateMoneyValue} taka is donated for ${donateHistory}</h4>
     <p>Date: ${new Date().toLocaleDateString()}</p>
