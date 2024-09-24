@@ -1,20 +1,40 @@
-const totalAmount = document.getElementById("total-amount");
-const addedMoney = document.getElementById("added-money");
-const donateMoney= document.getElementById("donate-money");
-const donationButton = document.getElementById("donation");
-const historyButton = document.getElementById("history");
+let totalAmount = document.getElementById("total-amount") ;
+let modalAmount = document.getElementById("modal-amount")
 
 
-const totalAmountNumber = parseFloat(totalAmount);
-const addedMoneyNumber = parseFloat(addedMoney);
-const donateMoneyNumber = parseFloat(donateMoney);
+function donateForFlood(donateInputId, addedMoneyId) {
+    const donateMoney = document.getElementById(donateInputId); 
+   
+    const addedMoney = document.getElementById(addedMoneyId);
+    let donateMoneyValue = parseFloat(donateMoney.value);
+    let totalAmountValue = parseFloat(totalAmount.innerText);
+    let addedMoneyValue = parseFloat(addedMoney.innerText);
 
-
-function donateForFlood(event){
-    if(typeof donateMoney ==="number"){
-        addedMoneyNumber+=donateMoneyNumber;
-        totalAmountNumber-=donateMoneyNumber;
-        console.log(addedMoneyNumber);
+    if (isNaN(donateMoneyValue) || donateMoneyValue <= 0) {
+        alert("Please enter a valid donation amount.");
+        donateMoney.value= "";
+        return;
     }
-    return addedMoneyNumber , totalAmountNumber;
+
+   else if (donateMoneyValue > totalAmountValue) {
+        alert("You do not have enough balance to make this donation.");
+        donateMoney.value= "";
+        return;
+    }
+ else{
+    totalAmountValue -= donateMoneyValue;
+    addedMoney.innerText= addedMoneyValue + donateMoneyValue;
+
+    document.getElementById('total-amount').innerText = totalAmountValue;
+document.getElementById("modal-amount").innerText = donateMoneyValue;
+   
+    document.getElementById("my_modal_5").showModal();
+    donateMoney.value= "";
+   
+
+    
+ }
+
 }
+
+

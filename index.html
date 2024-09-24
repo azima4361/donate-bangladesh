@@ -34,14 +34,17 @@
             <h3  class="text-[#111111B3]"><span id="total-amount">5500</span> BDT</h3>
         </div>
     </nav>
+
+    <div class="flex justify-center items-center gap-5 mt-16 backdrop-opacity-100">
+        <button  id="donation" class="btn bg-white px-8">Donation</button>
+        <button id="history" class="btn bg-white px-8">History</button>
+     </div>
     </header>
     <main>
-        <div class="flex justify-center items-center gap-5 mt-40">
-           <button  id="donation" class="btn bg-white px-8">Donation</button>
-           <button id="history" class="btn bg-white px-8">History</button>
-        </div>
+        
 
-        <section class="w-3/4 container mx-auto mt-20">
+        <section class="w-3/4 container mx-auto mt-72">
+            <!-- Noakhali  -->
             <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
                 <div class="" >
                     <img class="max-w-md h-full" src="assets/noakhali.png" alt="">
@@ -49,19 +52,112 @@
                 <div class="">
                     <button class="btn">
                         <img src="assets/coin.png" alt="">
-                        <p><span id="added-money">0</span>BDT</p>
+                        <p><span id="added-money-noakhali">0</span>BDT</p>
                     </button>
                     <h3 class="py-4 font-bold">Donate for Flood at Noakhali, Bangladesh</h3>
                     <p class=" pb-4 text-[#111111B3] font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input  class=" w-full border border-[#1111111A] rounded-lg px-5 py-3 " type="text" name="" id="donate-money" placeholder="Write Donation Amount">
+                    <input  class=" w-full border border-[#1111111A] rounded-lg px-5 py-3 " type="text" name="" id="donate-money-noakhali" placeholder="Write Donation Amount">
                     <div class="pt-5 w-full">
-                        <button onclick="donateForFlood(this)" class="btn w-full bg-[#B4F461] font-bold">Donate Now</button>
+                        <!-- Open the modal using ID.showModal() method -->
+<button id="donate-now-noakhali" class="btn w-full bg-[#B4F461] font-bold"  onclick=" donateForFlood('donate-money-noakhali','added-money-noakhali')">Donate Now</button>
+<dialog  id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-center">
+    <h3 class="text-4xl text-center font-bold">Congrates!</h3>
+    <img class="text-center max-w-full flex justify-center items-center ml-52 pt-5" src="assets/coin.png" alt="">
+    <h3 class="pt-3"><span id="modal-amount">0</span>BDT</h3>
+    <p class="py-4 text-center">You have donated for human kind</p>
+    <h3 class="text-xl font-bold text-center">Successfully</h3>
+    <div class="modal-action flex justify-center items-center">
+      <form method="dialog">
+
+            <button class="btn">Close confirmation</button>
+        
+        
+      </form>
+    </div>
+  </div>
+</dialog>
                     </div>
                     
                 </div>
             </div>
-            <div></div>
-            <div></div>
+
+<!-- feni  -->
+            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+                <div class="" >
+                    <img class="max-w-md h-full" src="assets/feni.png" alt="">
+                </div>
+                <div class="">
+                    <button class="btn">
+                        <img src="assets/coin.png" alt="">
+                        <p><span id="added-money-feni">0</span>BDT</p>
+                    </button>
+                    <h3 class="py-4 font-bold">Donate for Flood Relief in Feni,Bangladesh</h3>
+                    <p class=" pb-4 text-[#111111B3] font-light"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <input  class=" w-full border border-[#1111111A] rounded-lg px-5 py-3 " type="text" name="" id="donate-money-feni" placeholder="Write Donation Amount">
+                    <div class="pt-5 w-full">
+                        <!-- Open the modal using ID.showModal() method -->
+<button id="donate-now-feni" class="btn w-full bg-[#B4F461] font-bold"  onclick=" donateForFlood('donate-money-feni', 'added-money-feni')">Donate Now</button>
+<dialog  id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-center">
+    <h3 class="text-4xl text-center font-bold">Congrates!</h3>
+    <img class="text-center max-w-full flex justify-center items-center ml-52 pt-5" src="assets/coin.png" alt="">
+    <h3 class="pt-3"><span id="modal-amount">0</span>BDT</h3>
+    <p class="py-4 text-center">You have donated for human kind</p>
+    <h3 class="text-xl font-bold text-center">Successfully</h3>
+    <div class="modal-action flex justify-center items-center">
+      <form method="dialog">
+
+            <button class="btn">Close confirmation</button>
+        
+        
+      </form>
+    </div>
+  </div>
+</dialog>
+                    </div>
+                    
+                </div>
+            </div>
+<!-- quota  -->
+
+            <div class="border border-[#1111111A] rounded-2xl p-8 grid grid-cols-2">
+                <div class="" >
+                    <img class="max-w-md h-full" src="assets/quota-protest.png" alt="">
+                </div>
+                <div class="">
+                    <button class="btn">
+                        <img src="assets/coin.png" alt="">
+                        <p><span id="added-money-quota">0</span>BDT</p>
+                    </button>
+                    <h3 class="py-4 font-bold">Aid for Injured in the Quota Movement</h3>
+                    <p class=" pb-4 text-[#111111B3] font-light"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <input  class=" w-full border border-[#1111111A] rounded-lg px-5 py-3 " type="text" name="" id="donate-money-quota" placeholder="Write Donation Amount">
+                    <div class="pt-5 w-full">
+                        <!-- Open the modal using ID.showModal() method -->
+<button id="donate-now-quota" class="btn w-full bg-[#B4F461] font-bold"  onclick=" donateForFlood('donate-money-quota','added-money-quota')">Donate Now</button>
+<dialog  id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box text-center">
+    <h3 class="text-4xl text-center font-bold">Congrates!</h3>
+    <img class="text-center max-w-full flex justify-center items-center ml-52 pt-5" src="assets/coin.png" alt="">
+    <h3 class="pt-3"><span id="modal-amount">0</span>BDT</h3>
+    <p class="py-4 text-center">You have donated for human kind</p>
+    <h3 class="text-xl font-bold text-center">Successfully</h3>
+    <div class="modal-action flex justify-center items-center">
+      <form method="dialog">
+
+            <button class="btn">Close confirmation</button>
+        
+        
+      </form>
+    </div>
+  </div>
+</dialog>
+                    </div>
+                    
+                </div>
+            </div>
+          
         </section>
     </main>
    <script src="donate.js"></script>
