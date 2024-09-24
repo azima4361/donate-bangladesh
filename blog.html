@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    .lexend-font{
+        font-family: "Lexend", sans-serif;
+    }
+</style>
+<body class="lexend-font">
+    <header class="py-8 bg-[#F9F7F3] fixed left-0 top-0 z-50 w-full  ">
+        <nav class="grid grid-cols-1 lg:grid-cols-4 space-y-3">
+            <div class=" flex justify-center items-center ">
+               <button class="btn bg-[#B4F461] px-8" onclick="window.location.href='index.html'">Home</button>
+            </div>
+            <div class="col-span-2">
+                <div class="flex justify-center items-center gap-2">
+                    <img src="assets/logo.png" alt="">
+                    <h3 class="font-bold">Donate Bangladesh</h3>
+                </div>
+            </div>
+        
+        <div class=" flex justify-center gap-2 items-center">
+            <img src="assets/coin.png" alt="">
+            <h3  class="text-[#111111B3]"><span id="total-amount">5500</span> BDT</h3>
+        </div>
+    </nav>
+
+  
+    </header>
+
+    <main>
+        <div class="collapse collapse-arrow bg-base-200 mt-40 bg-white border border-[#1111111A] ">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+    </main>
+    <script src="donate.js"></script>
+<script src="blog.js"></script>
+</body>
+</html>
