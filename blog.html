@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a65688b8f2.js" crossorigin="anonymous"></script>
 </head>
 <style>
     .lexend-font{
@@ -39,27 +40,71 @@
     </header>
 
     <main>
-        <div class="collapse collapse-arrow bg-base-200 mt-40 bg-white border border-[#1111111A] ">
+<div class="mt-64 lg:mt-56 text-center">
+  <h1 class="text-xl lg:text-4xl font-extrabold">Important FAQ <i class="fa-solid fa-circle-question"></i></h1>
+</div>
+
+        <div class="collapse collapse-arrow bg-base-200 mt-14 bg-white border border-[#1111111A] lg:p-8">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title lg:text-2xl font-medium">What is the Document Object Model(DOM)?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm lg:text-lg font-light">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, allowing developers to interact with, modify, and manipulate the HTML or XML content of a webpage dynamically.HTML is used to structure the web pages and Javascript is used to add behavior to our web pages. When an HTML file is loaded into the browser, the JavaScript can not understand the HTML document directly. So it interprets and interacts with the Document Object Model (DOM), which is created by the browser based on the HTML document. <br> DOM is basically the representation of the same HTML document but in a tree-like structure composed of objects. JavaScript can not understand the tags( h1, h2) in HTML document but can understand object h1 in DOM.
+              <br> JavaScript interprets DOM easily, using it as a bridge to access and manipulate the elements. DOM Javascript allow access to each of the objects (h1, p, etc) by using different functions.</p>
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
+
+
+          <div class="collapse collapse-arrow bg-white border border-[#1111111A] lg:p-8">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title lg:text-2xl font-medium">How do you select an element from DOM?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm lg:text-lg font-light">Selecting DOM (Document Object Model) elements is a fundamental aspect of web development with JavaScript. It allows developers to interact with and manipulate elements on a webpage dynamically. Proper selection of elements is crucial for tasks such as updating content, adding event listeners, or modifying styles. <br> Below are the approaches to select DOM elements in JavaScript:
+              <br>1.Using getElementById
+              <br>This method selects a single element by its unique ID attribute.
+              <br>2.Using getElementsByClassName
+              <br>This method selects elements based on their class attribute. It returns a collection of elements with the specified class name.
+              <br>3.Using getElementsByTagName
+              <br>This method selects elements based on their tag name. It returns a collection of elements with the specified tag name.
+              <br>4.Using querySelector
+              <br>This method selects the first element that matches a specified CSS selector. It returns only one element.
+              <br>5.Using querySelectorAll
+              <br>Similar to querySelector, but it returns a NodeList containing all elements that match the specified CSS selector.
+            </p>
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
+
+
+          <div class="collapse collapse-arrow bg-white border border-[#1111111A] lg:p-8">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title lg:text-2xl font-medium">What is event delegation in the context of DOM and why is it useful?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p class="text-sm lg:text-lg font-light">Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the .target property of the event object. <br>With event delegation, instead of handling the click event on the button, you can handle it on the div. <br>  The idea is that you "delegate" the handling of an event to a different element (in this case, the div, which is a parent element) instead of the actual element (the button) that received the event.
+              <br>With event delegation, you create fewer event listeners and perform similar events-based logic in one place. This makes it easier for you to add and remove elements without having to add new or remove existing event listeners.</p>
             </div>
           </div>
+
+
+          <div class="collapse collapse-arrow bg-white border border-[#1111111A] lg:p-8">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title lg:text-2xl font-medium">How do you manipulate an event's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p class="text-sm lg:text-lg font-light">One can manipulate an event's attributes and styles using the DOM by interacting with the properties of an element in response to events such as clicks, keypresses, or mouse movements. JavaScript provides various ways to handle these manipulations.
+                <br>1. Manipulating Element Attributes
+                <br>getAttribute(attributeName): Retrieves the value of the specified attribute.
+               <br> setAttribute(attributeName, value): Sets a new value for the specified attribute.
+              <br>removeAttribute(attributeName): Removes an attribute from the element.
+              <br>2. Manipulating Styles
+              <br>You can modify an element's CSS styles dynamically using JavaScript by accessing the element's style property.You can access any CSS property via the style object using camelCase (e.g., backgroundColor, fontSize, etc.).
+              <br>3. Class Manipulation
+             <br> Instead of directly changing styles via the style property, you can toggle CSS classes on an element, making the code cleaner and more maintainable.
+             <br>element.classList.add("className"): Adds a class to the element.
+             <br>element.classList.remove("className"): Removes a class from the element.
+             <br>element.classList.toggle("className"): Adds the class if it is not present, and removes it if it is.
+            <br>element.classList.contains("className"): Checks if the element has a particular class.
+              </p>
+            </div>
+          </div>
+
     </main>
     <script src="donate.js"></script>
 <script src="blog.js"></script>
